@@ -1,5 +1,5 @@
 locals {
-  cluster_name = "test-eks-cluster-python"
+  cluster_name = "test-eks-cluster-python-1"
 }
 
 
