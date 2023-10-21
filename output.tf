@@ -9,7 +9,3 @@ output "aws_region" {
 output "eks_cluster_name" {
   value = module.eks.cluster_name
 }
-
-output "ecr-image" {
-  value = aws_ecr_repository.foo.repository_url
-}
