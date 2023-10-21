@@ -2,6 +2,20 @@ locals {
   cluster_name = "test-eks-cluster-python-1"
 }
 
+data "aws_caller_identity" "current" {}
+
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
+}
+
+output "caller_arn" {
+  value = data.aws_caller_identity.current.arn
+}
+
+output "caller_user" {
+  value = data.aws_caller_identity.current.user_id
+}
+
 
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
@@ -14,7 +28,7 @@ module "eks" {
   cluster_endpoint_private_access = true
   cluster_endpoint_public_access = true
   create_kms_key = true
-  kms_key_owners = [ "arn:aws:iam::166937434313:user/isaac2" ]
+  kms_key_owners = [ data.data.aws_caller_identity.current.arn ]
 
   
   iam_role_additional_policies = {
