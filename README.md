@@ -1,5 +1,5 @@
 
-# ebase-project
+# rebase-project
 
 To provision the infrastructure, confirm that you have the aws cli installed and your access keys configured.
 To install the aws cli, head to the documentation link below to install the CLI on Linux
