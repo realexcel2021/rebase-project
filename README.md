@@ -29,6 +29,11 @@ Finnally, run `kubectl get svc` to see the service provisioned. you'll find a lo
 
 ## Destroy Infrastructure
 
-To destroy the provisioned EKS Infrastructure, execute the command
-`terraform destroy -auto-approve`
+To destroy the provisioned EKS Infrastructure, execute the command below
 This command, removes the whole infrastructure from the AWS account and cleans up the project from the configuration
+
+`````
+kubectl delete deployment.yml
+kubectl delete service.yml
+terraform destroy -auto-approve
+`````
