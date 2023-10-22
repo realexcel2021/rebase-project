@@ -64,7 +64,7 @@ To run the python application on the alreacy provisioned infrasctructure, the ba
 
 Execute the below command to see the the service created
 ```sh
-kubectl get svg
+kubectl get svc
 ```
 You should have a list of services like this
 ![image](https://github.com/realexcel2021/rebase-project/assets/89150996/c7320b61-b2f2-4a9d-af8c-1022ee1d0b03)
